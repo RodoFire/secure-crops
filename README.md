@@ -9,6 +9,11 @@ This small vanilla mod prevents crops or farmland from being trampled by mobs an
 | secureFarmlandWithCrops | false |
 
 
+Allows also the farmlands to be always wet.
+
+| farmlandAlwaysWet | false |
+
+
 Multiplayer
 -----------
 The mod is only required on the server side, players don't need to have it installed.
