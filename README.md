@@ -11,6 +11,8 @@ This small vanilla mod prevents crops or farmland from being trampled by mobs an
 
 Allows also the farmlands to be always wet.
 
+| Gamerule       | Default value |
+|----------------| ------------- |
 | farmlandAlwaysWet | false |
 
 
