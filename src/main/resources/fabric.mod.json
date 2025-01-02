@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "securecrops",
-  "version": "${version}",
+  "version": "1.0.0",
 
   "name": "Secure Crops",
   "description": "Prevents crops/farmland from being trampled",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "icon": "assets/securecrops/icon.png",
 
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": [
       "net.zekk051.securecrops.SecureCrops"
@@ -26,8 +26,8 @@
   ],
 
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=0.15.0",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "1.21.1"
   }
 }

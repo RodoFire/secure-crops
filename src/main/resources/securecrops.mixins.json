@@ -4,7 +4,8 @@
   "package": "net.zekk051.securecrops.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "FarmlandMixin"
+    "FarmlandMixin",
+    "HoeItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

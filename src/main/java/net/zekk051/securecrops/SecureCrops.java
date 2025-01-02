@@ -5,13 +5,15 @@ import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.minecraft.world.GameRules;
 import net.minecraft.world.GameRules.BooleanRule;
+import org.slf4j.LoggerFactory;
 
 public class SecureCrops implements ModInitializer {
     // Modified code from https://github.com/A5b84/convenient-mobgriefing
     public static final GameRules.Key<BooleanRule>
             SECURE_CROPS = register("secureCrops", false), // Do not break crop or farmland when farmland has crops
-            SECURE_FARMLAND_WITH_CROPS = register("secureFarmlandWithCrops", false),	// Break crop but leave farmland when farmland has crops
-            SECURE_FARMLAND = register("secureFarmland", false); // Do not break farmland without crops
+            SECURE_FARMLAND_WITH_CROPS = register("secureFarmlandWithCrops", false),    // Break crop but leave farmland when farmland has crops
+            SECURE_FARMLAND = register("secureFarmland", false), // Do not break farmland without crops
+            HYDRATED = register("farmlandAlwaysWet", false); //farmlands are always wet
 
     private static GameRules.Key<BooleanRule> register(String name, boolean boolValue) {
         return GameRuleRegistry.register(
@@ -22,5 +24,6 @@ public class SecureCrops implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LoggerFactory.getLogger("securecrops").info("Initializing SecureCrops");
     }
 }
